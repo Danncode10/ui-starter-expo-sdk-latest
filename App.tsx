@@ -1,26 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View, ScrollView } from 'react-native';
+import 'react-native-gesture-handler';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export default function App() {
   return (
-    <SafeAreaProvider>
-      <GestureHandlerRootView style={{ flex: 1 }}>
-        <SafeAreaView className="flex-1 bg-gray-50">
-          <ScrollView
-            className="flex-1"
-            contentContainerStyle={{ padding: 16 }}
-          >
-            <View className="flex-1 items-center justify-center">
-              <Text className="text-red-600 font-bold text-2xl">
-  NativeWind is now working!
-</Text>
-            </View>
-          </ScrollView>
-          <StatusBar style="auto" />
+    <GestureHandlerRootView style={styles.flex}>
+      <SafeAreaProvider>
+        <SafeAreaView className="flex-1 bg-white items-center justify-center">
+          <Text className="text-red-500 font-bold text-2xl">
+            NativeWind is working!
+          </Text>
         </SafeAreaView>
-      </GestureHandlerRootView>
-    </SafeAreaProvider>
+      </SafeAreaProvider>
+    </GestureHandlerRootView>
   );
 }
+
+const styles = StyleSheet.create({
+  flex: { flex: 1 },
+});
