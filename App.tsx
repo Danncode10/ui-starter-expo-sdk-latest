@@ -1,3 +1,4 @@
+import "./global.css" // Mandatory import for Tailwind/NativeWind Library compiler
 import 'react-native-gesture-handler';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
@@ -8,9 +9,9 @@ export default function App() {
   return (
     <GestureHandlerRootView style={styles.flex}>
       <SafeAreaProvider>
-        <SafeAreaView className="flex-1 bg-white items-center justify-center">
-          <Text className="text-red-500 font-bold text-2xl">
-            NativeWind is working if this text is red
+        <SafeAreaView className="items-center justify-center flex-1 bg-white">
+          <Text className="text-2xl font-bold text-red-500">
+            Welcome to NativeWind my Friend!
           </Text>
         </SafeAreaView>
       </SafeAreaProvider>
