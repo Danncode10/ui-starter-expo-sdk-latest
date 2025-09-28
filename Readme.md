@@ -1,6 +1,3 @@
-Here’s a clean **README template** for your Expo + React Native + TypeScript starter UI project:
-
-
 # Expo UI Starter (Latest SDK) - TypeScript
 
 A starter UI project for **React Native** using the latest **Expo SDK** with **TypeScript**.  
