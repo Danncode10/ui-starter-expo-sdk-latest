@@ -13,7 +13,9 @@ export default function App() {
             contentContainerStyle={{ padding: 16 }}
           >
             <View className="flex-1 items-center justify-center">
-              <Text className="text-black">Open up App.tsx to start working on your app!</Text>
+              <Text className="text-red-600 font-bold text-2xl">
+  NativeWind is now working!
+</Text>
             </View>
           </ScrollView>
           <StatusBar style="auto" />
