@@ -1,16 +1,19 @@
-# Expo UI Starter (Latest SDK) - TypeScript
 
-A starter UI project for **React Native** using the latest **Expo SDK** with **TypeScript**.  
-This template resolves common Expo setup issues and provides a clean starting point for building mobile apps.
+
+# Expo UI Starter (Latest SDK) - TypeScript + NativeWind
+
+A starter UI project for **React Native** using the latest **Expo SDK** with **TypeScript** and **NativeWind (Tailwind CSS for React Native)**.
+This template resolves common Expo setup issues and provides a clean starting point for building mobile apps with **Tailwind styling**.
 
 ---
 
 ## Features
 
-- ✅ Latest Expo SDK support  
-- ✅ TypeScript ready  
-- ✅ Preconfigured basic UI structure  
-- ✅ Fix for `ConfigError: Cannot determine the project's Expo SDK version`  
+* ✅ Latest Expo SDK support
+* ✅ TypeScript ready
+* ✅ NativeWind preconfigured for Tailwind styling
+* ✅ Preconfigured basic UI structure
+* ✅ Fix for `ConfigError: Cannot determine the project's Expo SDK version`
 
 ---
 
@@ -18,9 +21,10 @@ This template resolves common Expo setup issues and provides a clean starting po
 
 ### Prerequisites
 
-- Node.js (>= 18 recommended)  
-- npm or yarn  
-- Expo CLI installed globally:  
+* Node.js (>= 18 recommended)
+* npm or yarn
+* Expo CLI installed globally:
+
 ```bash
 npm install -g expo-cli
 ```
@@ -42,7 +46,14 @@ npm install
 yarn install
 ```
 
-3. Start the development server:
+3. Install NativeWind dependencies:
+
+```bash
+npm install nativewind tailwindcss
+npx tailwindcss init
+```
+
+4. Start the development server:
 
 ```bash
 expo start
@@ -53,9 +64,11 @@ expo start
 ## Project Structure
 
 ```
-├── App.tsx           # Main entry file
+├── App.tsx           # Main entry file (NativeWind ready)
 ├── tsconfig.json     # TypeScript configuration
 ├── package.json      # Dependencies & scripts
+├── tailwind.config.js# Tailwind/NativWind configuration
+├── global.css        # Tailwind directives for NativeWind
 ├── assets/           # Images, fonts, and other assets
 └── components/       # Reusable UI components
 ```
@@ -65,7 +78,14 @@ expo start
 ## Usage
 
 * Modify `App.tsx` or add new components in `components/`
-* Use TypeScript for type safety and better development experience
+* Use Tailwind classes via NativeWind for styling:
+
+```jsx
+<View className="flex-1 justify-center items-center bg-red-500">
+  <Text className="text-white text-2xl font-bold">Tailwind is working!</Text>
+</View>
+```
+
 * Run on iOS, Android, or web using Expo Go
 
 ---
@@ -86,14 +106,30 @@ npm install expo
 
 and restart the server.
 
+If Tailwind classes do not apply, verify:
+
+1. `babel.config.js` includes:
+
+```javascript
+module.exports = {
+  presets: ['babel-preset-expo'],
+  plugins: ['nativewind/babel'],
+};
+```
+
+2. `global.css` contains:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+3. `tailwind.config.js` is present and correctly configured.
+
 ---
 
 ## License
 
 MIT License
 
-
-
----
-
-If you want, I can also **add a “Starter UI Screenshots & Demo” section** so it looks more professional for GitHub. Do you want me to add that?
