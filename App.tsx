@@ -10,7 +10,7 @@ export default function App() {
       <SafeAreaProvider>
         <SafeAreaView className="flex-1 bg-white items-center justify-center">
           <Text className="text-red-500 font-bold text-2xl">
-            NativeWind is working!
+            NativeWind is working if this text is red
           </Text>
         </SafeAreaView>
       </SafeAreaProvider>
