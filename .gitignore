@@ -1,136 +1,41 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
 # dependencies
-/node_modules
-/.pnp
-.pnp.js
-.yarn/install-state.gz
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-/dist
-/out
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# local env files
-.env*.local
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-
-# expo
-.expo/*
-!~/.expo
-web-build/
-
-# metro cache
-.metro-health-check*
-
-# native
-*.orig.*
-*.log
-*.tlog
-*.pyc
-*.swp
-*~
-
-# android
-android/app/build/
-android/.gradle
-android/app/release/
-android/build/
-android/local.properties
-android/captures/
-android/gradlew
-android/gradlew.bat
-android/key.properties
-android/local.properties
-android/uber_apk_generation/
-
-# ios
-ios/.xcode.env.local
-ios/build/
-ios/DerivedData/
-ios/Pods/
-ios/Podfile.lock
-ios/captures/
-ios/deriveddata/
-ios/local.properties
-ios/native-base-cache/
-ios/Podfile.lock
-ios/build/
-
-# macOS
-.DS_Store
-
-# IDEs
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# Coverage directory used by tools like istanbul
-coverage/
-*.lcov
-
-# nyc test coverage
-.nyc_output
-
-# Dependency directories
 node_modules/
 
 # Expo
 .expo/
+dist/
 web-build/
+expo-env.d.ts
 
-# Babel
-.cache/
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
 
-# OS generated files
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+*.pem
 
-# Temporary files
-tmp/
-temp/
+# local env files
+.env*.local
 
-# Config files
-config/
+# typescript
+*.tsbuildinfo
+
+# generated native folders
+/ios
+/android
