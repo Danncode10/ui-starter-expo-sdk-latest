@@ -1,0 +1,4 @@
+# Python dependencies for the project
+# Add packages here as needed, e.g.:
+# flask==2.3.3
+# nativewind (Note: This is a React Native library; no direct Python equivalent)
